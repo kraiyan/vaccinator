@@ -2,7 +2,7 @@
 
 import logo from '../vaccines.png'
 
-import Form from "./forms"
+
 
 import "./main.css"
 const Main = ()=>{
@@ -25,7 +25,7 @@ return (
 
     </div>
 
-     <Form/>
+    
     
     </>
 

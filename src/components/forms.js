@@ -8,6 +8,8 @@ import "./forms.css"
 import  Card from "react-bootstrap/Card"
 import Moment from "moment"
 
+import Main from "./main"
+
 
  const  Forms = () => {
 
@@ -43,6 +45,8 @@ import Moment from "moment"
        }
 
     return (
+           <>
+         <Main/>
         <div className="form1">
             <Card   clasName= "card">
 
@@ -89,6 +93,7 @@ import Moment from "moment"
              </div>}
       
     </div>
+    </>
     );
 
     };
