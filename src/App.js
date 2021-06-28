@@ -1,10 +1,22 @@
 
 import './App.css';
 
+import Main from "./components/main"
+import Forms from "./components/forms"
+
+
+
+
 function App() {
   return (
    
-         <h2>The vaccinator</h2>
+         <>
+        
+
+         <Main/>
+         <Forms/>
+
+        </>
   );
 }
 
