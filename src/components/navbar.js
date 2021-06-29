@@ -13,6 +13,7 @@ function Navbar1() {
         <Nav className="ml-auto">
           <Nav.Item><Nav.Link as={Link} to="/preventive">Prevention Measures</Nav.Link></Nav.Item> 
           <Nav.Item><Nav.Link as={Link} to ="/vaccine_info">Vaccine details</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link as={Link} to ="/corona_tracker">Covid Tracker</Nav.Link></Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

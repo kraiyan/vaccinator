@@ -2,12 +2,13 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Main from "./components/main"
  import Forms from "./components/forms"
 
 import Navbar1  from  "./components/navbar"
 import Prevention from "./components/Prevention"
 import Vaccination from "./components/Vaccination"
+import Tracker from "./components/tracker"
+
 
 
 
@@ -28,6 +29,7 @@ function App() {
                 <Route exact path="/" component={Forms} />
                  <Route path ="/preventive" component={Prevention}/>
                   <Route path ="/vaccine_info" component={Vaccination}/>
+                  <Route path ="/corona_tracker" component={Tracker}/>
                      
               </Switch>
          

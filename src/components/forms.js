@@ -16,6 +16,8 @@ import Main from "./main"
        const[pincode,setpincode]=useState("");
        const [date,setDate]=useState("");
        const [locations,setLocations]= useState([])
+
+        
               
           const formatdate = Moment(date).format("DD-MM-YYYY");
        console.log(formatdate,pincode);
@@ -43,7 +45,14 @@ import Main from "./main"
                  console.log(error);
              })
        }
-
+          const doBooking=(e)=>{
+                       
+                         e.preventDefault();
+                           window.location.href='https://www.cowin.gov.in/home';
+             
+          }
+       
+       
     return (
            <>
          <Main/>
@@ -79,12 +88,16 @@ import Main from "./main"
 
                    return(
                          
-                          <Card style={{  backgroundColor:"lightgreen", marginLeft : "390px", borderRadius:"30px",   height:"300px",width:"500px" } }>
+                          <Card style={{ padding :"20px", backgroundColor:"lightgreen", marginLeft : "390px", borderRadius:"30px",   height:"500px",width:"500px" } }>
                          <h1>{location.name}</h1>
                          <h4>Address: {location.address}</h4>
                          <h4> vaccine type :{location.vaccine}</h4>
-                         <h4>availablity : {location.available_capacity}</h4>
+                         <h4>availablity : {location.available_capacity===0?<h4>Not Available</h4>:<h4>{location.available_capacity}</h4>}</h4>
                          <h4>Fee Type : {location.fee_type}</h4>
+                         
+                           <Button onClick={doBooking} disabled={location.available_capacity>0?0:1}  size= "lg" variant="btn btn-danger">
+                                             Book Now
+                                            </Button>
                          </Card>
                    )
                })}
