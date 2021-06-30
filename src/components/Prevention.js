@@ -5,16 +5,17 @@ import Fever from "../images/fever.jpg"
 import Cover from "../images/cover.jpg"
 import { Card } from "react-bootstrap"
 import Safe from "../images/safe.jpg"
-
+import Main from "./main"
 
 const Prevention = () => {
     return (
 
         <>
+              
+                <Main/>
 
-
-            <div className="row">
-                <Card style={{ width: '18rem', marginLeft: "50px" }}>
+            <div  style={{ marginLeft: "150px", display: "flex"}} className="row">
+                <Card style={{  backgroundColor:"lightgreen",width: '18rem', marginRight : "20px", marginLeft: "50px" }}>
                     <Card.Img variant="top" src={Sanitizer} />
                     <Card.Body>
                         <Card.Title></Card.Title>
@@ -29,7 +30,7 @@ const Prevention = () => {
 
 
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ backgroundColor:"lightgreen", width: '18rem'  }}>
                     <Card.Img variant="top" src={Mask} />
                     <Card.Body>
                         <Card.Title></Card.Title>
@@ -41,7 +42,7 @@ const Prevention = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ backgroundColor:"lightgreen", marginLeft: "190px",width: '18rem' }}>
                     <Card.Img variant="top" src={Coughpic} />
                     <Card.Body>
                         <Card.Title></Card.Title>
@@ -57,12 +58,12 @@ const Prevention = () => {
 
 
 
-            </div>
+            </div >
             <br /><br />
 
-            <div className="row">
+            <div  style={{ marginLeft: "150px", display: "flex"}}className="row">
 
-                <Card style={{ width: '18rem', marginLeft: "50px" }}>
+                <Card style={{  backgroundColor:"lightgreen", width: '18rem', marginLeft: "50px" }}>
                     <Card.Img variant="top" src={Fever} />
                     <Card.Body>
                         <Card.Title></Card.Title>
@@ -74,7 +75,7 @@ const Prevention = () => {
                 </Card>
 
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ backgroundColor:"lightgreen", width: '18rem' }}>
                     <Card.Img variant="top" src={Cover} />
                     <Card.Body>
                         <Card.Title></Card.Title>
@@ -84,7 +85,7 @@ const Prevention = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ backgroundColor:"lightgreen", width: '18rem' }}>
                     <Card.Img variant="top" src={Safe} />
                     <Card.Body>
                         <Card.Title></Card.Title>

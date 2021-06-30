@@ -9,7 +9,7 @@ import Main from './main';
  import Card from '@material-ui/core/Card';
  import CardActions from '@material-ui/core/CardActions';
  import CardContent from '@material-ui/core/CardContent';
- import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button"
  import Typography from '@material-ui/core/Typography' 
  import { makeStyles } from '@material-ui/core/styles';
 
@@ -49,9 +49,9 @@ const useStyles = makeStyles({
 
    const Tracker=()=>{
     const classes = useStyles();
-         const [contry,setinputinfo]= useState({})
+         
          const[countryinfo,setcountryinfo]= useState({})
-         const [countries,setCountries]= useState({})
+         
 
          useEffect( async()=>{
 
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
             people got effected by covid in india
         </Typography>
         <Typography variant="body2" component="p">
-            Prevention is better then cure
+        India stands on 2 when it comes to number of Covid cases
           <br />
           {'"a benevolent smile"'}
         </Typography>
@@ -95,16 +95,16 @@ const useStyles = makeStyles({
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-               Total Cases
+               Total Deaths
         </Typography>
         <Typography variant="h5" component="h2">
-        <CountUp start={0} end={countryinfo.cases!=null?countryinfo.cases:10000}  duration={5} separator=","/>
+        <CountUp start={0} end={countryinfo.deaths!=null?countryinfo.deaths:10000}  duration={5} separator=","/>
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-            people got effected by covid in india
+            people lost their life in India
         </Typography>
         <Typography variant="body2" component="p">
-            Prevention is better then cure
+                   Indeed 
           <br />
           {'"a benevolent smile"'}
         </Typography>
@@ -116,16 +116,16 @@ const useStyles = makeStyles({
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-               Total Cases
+               Total Recovered
         </Typography>
         <Typography variant="h5" component="h2">
-        <CountUp start={0} end={countryinfo.cases!=null?countryinfo.cases:10000}  duration={5} separator=","/>
+        <CountUp start={0} end={countryinfo.recovered!=null?countryinfo.recovered:10000}  duration={5} separator=","/>
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-            people got effected by covid in india
+            people got Recovered in India 
         </Typography>
         <Typography variant="body2" component="p">
-            Prevention is better then cure
+             India stands on top with highest Recovery rate till date
           <br />
           {'"a benevolent smile"'}
         </Typography>
@@ -137,13 +137,13 @@ const useStyles = makeStyles({
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-               Total Cases
+              Cases Registerd Today
         </Typography>
         <Typography variant="h5" component="h2">
-        <CountUp start={0} end={countryinfo.cases!=null?countryinfo.cases:10000}  duration={5} separator=","/>
+        <CountUp start={0} end={countryinfo.todayCases!=null?countryinfo.todayCases:10000}  duration={5} separator=","/>
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-            people got effected by covid in india
+             Its time to get vaccinated folks to end this!!
         </Typography>
         <Typography variant="body2" component="p">
             Prevention is better then cure
