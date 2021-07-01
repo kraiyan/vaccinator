@@ -6,12 +6,13 @@ import Cover from "../images/cover.jpg"
 import { Card } from "react-bootstrap"
 import Safe from "../images/safe.jpg"
 import Main from "./main"
+import {Container} from "react-bootstrap"
 
 const Prevention = () => {
     return (
 
         <>
-              
+              <Container>
                 <Main/>
 
             <div  style={{ marginLeft: "150px", display: "flex"}} className="row">
@@ -96,7 +97,7 @@ const Prevention = () => {
                     </Card.Body>
                 </Card>
             </div>
-
+            </Container>
 
 
 
