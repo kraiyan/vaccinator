@@ -12,6 +12,7 @@ import Main from './main';
 import Button from "@material-ui/core/Button"
  import Typography from '@material-ui/core/Typography' 
  import { makeStyles } from '@material-ui/core/styles';
+  import {Container} from "react-bootstrap"
 
  
 
@@ -19,12 +20,14 @@ import Button from "@material-ui/core/Button"
 import React from 'react'
 const useStyles = makeStyles({
     root: {
-      minWidth: 275,
-      width:300,
+    
       marginRight: "10px",
       marginTop : "20px",
-      backgroundColor: "lightgreen"
-       
+      backgroundColor: "lightgreen",
+       justifyContent:"center",
+       textAlign:"center",
+        alignContent:"center"
+    
     },
      
     bullet: {
@@ -40,7 +43,10 @@ const useStyles = makeStyles({
       marginBottom: 12,
     },
     layout:{
-        display: "flex"
+      display:"d-flex flex-lg-row",
+      flexDirection:"row"
+      
+       
         
     },
   });
@@ -68,11 +74,13 @@ const useStyles = makeStyles({
     return (
 
            <>
-             <Main/>
+           <Container fluid>
+             <Main/> 
             
+            <div className="d-flex flex-column">
             <div className={classes.layout}>
             <Card className={classes.root}>
-      <CardContent>
+      <CardContent >
         <Typography className={classes.title} color="textSecondary" gutterBottom>
                Total Cases
         </Typography>
@@ -157,6 +165,8 @@ const useStyles = makeStyles({
     </Card>
     
     </div>
+    </div>s
+    </Container>
 
 
 

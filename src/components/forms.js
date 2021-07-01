@@ -6,6 +6,7 @@ import  Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import "./forms.css"
 import  Card from "react-bootstrap/Card"
+import { Container } from "react-bootstrap"
 import Moment from "moment"
 
 import Main from "./main"
@@ -56,8 +57,9 @@ import Main from "./main"
     return (
            <>
          <Main/>
-        <div className="form1">
-            <Card   clasName= "card">
+          <Container >
+        <div className="form1  d-flex flex-column ">
+            <Card   className= "card">
 
 <Form onSubmit={doSomething}>
  
@@ -87,8 +89,8 @@ import Main from "./main"
                {locations.map((location,index)=>{
 
                    return(
-                         
-                          <Card style={{ padding :"20px", backgroundColor:"lightgreen", marginLeft : "390px", borderRadius:"30px",   height:"500px",width:"500px" } }>
+                          <div  >
+                          <Card className="d-flex mb-3 "  style={{ padding :"20px", backgroundColor:"lightgreen", borderRadius:"30px",marginBottom:"20px" } }>
                          <h1>{location.name}</h1>
                          <h4>Address: {location.address}</h4>
                          <h4> vaccine type :{location.vaccine}</h4>
@@ -99,6 +101,7 @@ import Main from "./main"
                                              Book Now
                                             </Button>
                          </Card>
+                         </div>
                    )
                })}
              
@@ -106,6 +109,8 @@ import Main from "./main"
              </div>}
       
     </div>
+    
+    </Container>
     </>
     );
 
